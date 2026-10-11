@@ -15,7 +15,7 @@
      YOUR SETTINGS - change only the 4 lines below, nothing else
      ============================================================ -->
 <script>
-  var APK_URL   = "PASTE_YOUR_APK_LINK_HERE";   // GitHub Releases link of the APK
+  var APK_URL   = "https://github.com/aneesbhatti432/maani-nexora/releases/download/v1.0/MaaniNexora-v1.0.apk";   // GitHub Releases link of the APK
   var DEV_NAME  = "Anees Ahmad Bhatti";             // your name
   var DEV_EMAIL = "aneesbhatti3241@gmail.com";     // your contact email
   var APK_INFO  = "Version 1.0 · 121 MB";       // update when you release a new version
@@ -54,16 +54,16 @@ section{padding:72px 0}
   background:radial-gradient(circle,rgba(30,144,255,.20),rgba(30,144,255,0) 62%);pointer-events:none}
 .orb{position:relative;width:min(300px,76vw);margin:8px auto 30px;aspect-ratio:1;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 .orb svg{width:100%;height:100%;display:block;overflow:visible}
-.ring{transform-origin:200px 200px;transform-box:view-box}
-.r1{animation:spin 46s linear infinite}
-.r2{animation:spin 22s linear infinite reverse}
-.r3{animation:spin 30s linear infinite}
-.r4{animation:spin 14s linear infinite reverse}
+.ring{transform-origin:center;transform-box:fill-box}
+.r1{animation:spin 60s linear infinite}
+.r2{animation:spin 24s linear infinite reverse}
+.r3{animation:spin 16s linear infinite}
+.r4{animation:spin 70s linear infinite reverse}
 @keyframes spin{to{transform:rotate(360deg)}}
-.core{transform-origin:200px 200px;transition:transform .25s ease}
+.core{transform-origin:center;transform-box:fill-box;transition:transform .25s ease}
 .orb:hover .core,.orb.press .core{transform:scale(.95)}
 .orb.press .r2{animation-duration:3s}
-.orb.press .r4{animation-duration:2s}
+.orb.press .r3{animation-duration:2.5s}
 h1{font-size:clamp(1.9rem,8.4vw,3.6rem);letter-spacing:.12em;font-weight:400}
 h1 span{color:var(--blue)}
 .tag{font-size:clamp(1.05rem,3.6vw,1.3rem);color:var(--ice);margin:18px auto 0;max-width:30ch}
@@ -139,18 +139,26 @@ footer p{max-width:62ch;margin:0 auto 10px}
 <section class="hero">
   <div class="wrap">
     <div class="orb" id="orb" aria-hidden="true">
-      <svg viewBox="0 0 400 400">
+      <svg viewBox="190 190 644 644">
         <defs>
-          <radialGradient id="g" cx="38%" cy="34%" r="75%">
-            <stop offset="0" stop-color="#4db8ff"/><stop offset=".38" stop-color="#1e90ff"/><stop offset=".72" stop-color="#14609e"/><stop offset="1" stop-color="#06213f"/>
+          <radialGradient id="g" cx="36%" cy="43%" r="78%">
+            <stop offset="0" stop-color="#4db8ff"/><stop offset=".4" stop-color="#1e90ff"/><stop offset=".75" stop-color="#145a9c"/><stop offset="1" stop-color="#031a35"/>
           </radialGradient>
         </defs>
-        <g class="ring r1"><circle cx="200" cy="200" r="190" fill="none" stroke="#1e90ff" stroke-opacity=".55" stroke-width="5" stroke-linecap="round" stroke-dasharray="26 14"/></g>
-        <circle cx="200" cy="200" r="168" fill="none" stroke="#1e90ff" stroke-opacity=".2" stroke-width="2"/>
-        <g class="ring r2"><circle cx="200" cy="200" r="152" fill="none" stroke="#2cb0ff" stroke-width="9" stroke-linecap="round" stroke-dasharray="330 625"/></g>
-        <g class="ring r3"><circle cx="200" cy="200" r="132" fill="none" stroke="#59c0ff" stroke-width="6" stroke-linecap="round" stroke-dasharray="190 640" /></g>
-        <g class="ring r4"><circle cx="200" cy="200" r="120" fill="none" stroke="#8fd3ff" stroke-opacity=".5" stroke-width="3" stroke-dasharray="2 8"/></g>
-        <g class="core"><circle cx="200" cy="200" r="105" fill="url(#g)" stroke="#1e90ff" stroke-width="3"/></g>
+        <g class="ring r1"><circle cx="512" cy="512" r="303" fill="none" stroke="#5db4ff" stroke-opacity=".75" stroke-width="8" stroke-linecap="round" stroke-dasharray="44 32"/></g>
+        <circle cx="512" cy="512" r="272" fill="none" stroke="#5db4ff" stroke-opacity=".18" stroke-width="3"/>
+        <g class="ring r4"><circle cx="512" cy="512" r="236" fill="none" stroke="#7cc4ff" stroke-opacity=".5" stroke-width="15" stroke-dasharray="2.5 18.7"/></g>
+        <g class="ring r2">
+          <circle cx="512" cy="512" r="283" fill="none" stroke="none"/>
+          <circle cx="512" cy="512" r="283" fill="none" stroke="#4fb6ff" stroke-width="15" stroke-linecap="round" stroke-dasharray="444 1334" transform="rotate(-60 512 512)"/>
+          <circle cx="512" cy="512" r="283" fill="none" stroke="#4fb6ff" stroke-width="15" stroke-linecap="round" stroke-dasharray="444 1334" transform="rotate(130 512 512)"/>
+        </g>
+        <g class="ring r3">
+          <circle cx="512" cy="512" r="240" fill="none" stroke="none"/>
+          <circle cx="512" cy="512" r="240" fill="none" stroke="#3fb0ff" stroke-width="12" stroke-linecap="round" stroke-dasharray="335 1173" transform="rotate(-160 512 512)"/>
+          <circle cx="512" cy="512" r="240" fill="none" stroke="#3fb0ff" stroke-width="12" stroke-linecap="round" stroke-dasharray="335 1173" transform="rotate(20 512 512)"/>
+        </g>
+        <g class="core"><circle cx="512" cy="512" r="219" fill="url(#g)" stroke="#1e90ff" stroke-width="6"/></g>
       </svg>
     </div>
     <h1>MAANI <span>NEXORA</span></h1>
